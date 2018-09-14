@@ -1,0 +1,16 @@
+{
+  "name": "ecs-right-size-cluster-lambda",
+  "description": "Lambda function to right size ASG for an ECS cluster",
+  "dependencies": {
+    "aws-sdk": "^2.187.0"
+  },
+  "engines": {
+    "node": ">=6.5.0 <7.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silinternational/ecs-right-size-cluster-lambda"
+  },
+  "scripts": {}
+}

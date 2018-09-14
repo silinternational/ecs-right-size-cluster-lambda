@@ -1,0 +1,4 @@
+.idea/
+aws.env
+*.aes
+vendor/
