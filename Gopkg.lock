@@ -14,7 +14,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:1d714b12aed428178eb8a7aeac442f010679f09417339634199d2684dd6c90d0"
+  digest = "1:e4252b121f2874d04ea897c3d6f14861c871cb3d7216b8aafe0c7985bd21f28e"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -54,16 +54,16 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "10d5f1478e28a17062fd79617a8022f5499462d5"
-  version = "v1.15.34"
+  revision = "53e36ebb6b2c26d228ba9563d06caf306227f110"
+  version = "v1.15.46"
 
 [[projects]]
-  digest = "1:5abd6a22805b1919f6a6bca0ae58b13cef1f3412812f38569978f43ef02743d4"
+  digest = "1:b98e7574fc27ec166fb31195ec72c3bd0bffd73926d3612eb4c929bc5236f75b"
   name = "github.com/go-ini/ini"
   packages = ["."]
   pruneopts = "UT"
-  revision = "5cf292cae48347c2490ac1a58fe36735fb78df7e"
-  version = "v1.38.2"
+  revision = "7b294651033cd7d9e7f0d9ffa1b75ed1e198e737"
+  version = "v1.38.3"
 
 [[projects]]
   digest = "1:e22af8c7518e1eab6f2eab2b7d7558927f816262586cd6ed9f349c97a6c285c4"
@@ -82,11 +82,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:7c71c031fb89c702a2ee9f44df15a98629d035994d8761d6bfefcdc57b706468"
+  digest = "1:0d0dba19d8ecb8c5cc2e6237fe443f4234ec39a81d122e477d04e27a49139f1c"
   name = "github.com/silinternational/awsops"
   packages = ["lib"]
   pruneopts = "UT"
-  revision = "552ceb3aa232c4317f829af3f61c70a223e7c22d"
+  revision = "452e957294820db300c37555229c618906dd1bd0"
 
 [solve-meta]
   analyzer-name = "dep"
