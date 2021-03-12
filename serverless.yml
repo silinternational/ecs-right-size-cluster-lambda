@@ -13,7 +13,7 @@ provider:
   timeout: 30
   versionFunctions: false
   memorySize: 128
-
+  logRetentionInDays: 14
   # you can overwrite defaults here
   #  stage: dev
   #  region: us-east-1
