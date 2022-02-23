@@ -17,33 +17,34 @@ provider:
   #  region: us-east-1
 
   # you can add statements to the Lambda function's IAM Role here
-  iamRoleStatements:
-  - Effect: "Allow"
-    Action:
-      - "autoscaling:DescribeAutoScalingGroups"
-      - "autoscaling:DescribeLaunchConfigurations"
-      - "autoscaling:UpdateAutoScalingGroup"
-      - "ec2:DescribeInstances"
-      - "ecs:DescribeContainerInstances"
-      - "ecs:DescribeServices"
-      - "ecs:DescribeTaskDefinition"
-      - "ecs:ListContainerInstances"
-      - "ecs:ListServices"
-    Resource: "*"
+  iam:
+    role:
+      statements:
+      - Effect: "Allow"
+        Action:
+        - "autoscaling:DescribeAutoScalingGroups"
+        - "autoscaling:DescribeLaunchConfigurations"
+        - "autoscaling:UpdateAutoScalingGroup"
+        - "ec2:DescribeInstances"
+        - "ecs:DescribeContainerInstances"
+        - "ecs:DescribeServices"
+        - "ecs:DescribeTaskDefinition"
+        - "ecs:ListContainerInstances"
+        - "ecs:ListServices"
+        Resource: "*"
 
   # you can define service wide environment variables here
   environment:
-    stage: ${self:custom.stage}
+    stage: ${sls:stage}
     namespace: ${self:custom.namespace}
 
 custom:
-  stage: ${opt:stage, self:provider.stage}
-  namespace: ${self:service}_${self:custom.stage}
+  namespace: ${self:service}_${sls:stage}
 
 package:
   patterns:
-    - ./**
-    - ./ecs-right-size-cluster
+  - ./**
+  - ./ecs-right-size-cluster
 
 functions:
   ecsRightSizeCluster:
@@ -52,5 +53,5 @@ functions:
     - schedule:
         rate: rate(10 minutes) # every 10 minutes
         input:
-          Region: ${self:provider.region}
+          Region: ${env:AWS_REGION}
           ClusterNamesCSV: ${env:ClusterNamesCSV}

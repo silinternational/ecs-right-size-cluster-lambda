@@ -8,6 +8,6 @@ WORKDIR /src
 
 # Copy in source and install deps
 COPY ./package.json .
-RUN npm install -g serverless@3 && npm install
+RUN npm install --no-fund -g serverless@3 && npm install --no-fund
 COPY ./ .
 RUN go get ./...
