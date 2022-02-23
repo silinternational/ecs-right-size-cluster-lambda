@@ -2,6 +2,8 @@ version: "3"
 services:
   app:
     build: .
+    volumes:
+      - ./:/src
     env_file:
       - aws.env
     command: ["bash"]

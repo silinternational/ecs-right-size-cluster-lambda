@@ -3,3 +3,4 @@ aws.env
 *.aes
 vendor/
 .terraform/
+.serverless/
