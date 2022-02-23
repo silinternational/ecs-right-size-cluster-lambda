@@ -3,9 +3,7 @@
 
 service: ecs-right-size-cluster
 
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
+frameworkVersion: ^3.2.0
 
 provider:
   name: aws
@@ -43,10 +41,9 @@ custom:
   namespace: ${self:service}_${self:custom.stage}
 
 package:
-  exclude:
-  - ./**
-  include:
-  - ./ecs-right-size-cluster
+  patterns:
+    - ./**
+    - ./ecs-right-size-cluster
 
 functions:
   ecsRightSizeCluster:

@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"strings"
+
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/pkg/errors"
 	"github.com/silinternational/awsops/lib"
-	"os"
-	"strings"
 )
 
 type EcsRightSizeClusterConfig struct {
