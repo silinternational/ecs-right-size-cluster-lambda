@@ -2,6 +2,8 @@
 
 # Exit if any command below fails
 set -e
+
+# Echo each command in the script
 set -x
 
 # build binary
@@ -13,4 +15,4 @@ if [[ "${CI_BRANCH}" == "master" ]]; then
 fi
 
 echo "Deploying ecs-right-size-cluster..."
-serverless deploy -v --stage $STAGE
+serverless deploy --stage $STAGE
