@@ -10,6 +10,6 @@ require (
 	github.com/silinternational/awsops v0.0.0-20181002155739-452e95729482
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
-	golang.org/x/net v0.0.0-20210316092652-d523dce5a7f4 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	gopkg.in/ini.v1 v1.62.0 // indirect
 )
