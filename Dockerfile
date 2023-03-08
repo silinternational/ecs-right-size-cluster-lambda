@@ -1,4 +1,4 @@
-FROM golang:1.17
+FROM golang:1.19
 
 # Install packages
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
