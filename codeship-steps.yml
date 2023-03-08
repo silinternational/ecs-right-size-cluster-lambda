@@ -1,9 +1,9 @@
 - name: deploy
   service: app
-  tag: ^(main|master)
+  tag: main
   command: ./deploy-lambdas.sh
 
 - name: track_deployment
   service: tracker
-  tag: ^(main|master)
+  tag: main
   command: "true"
