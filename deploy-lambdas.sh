@@ -15,4 +15,4 @@ if [[ "${CI_BRANCH}" == "master" ]]; then
 fi
 
 echo "Deploying ecs-right-size-cluster..."
-serverless deploy --stage $STAGE
+serverless deploy --verbose --stage $STAGE
