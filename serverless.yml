@@ -57,3 +57,4 @@ functions:
         input:
           Region: ${env:AWS_REGION}
           ClusterNamesCSV: ${env:ClusterNamesCSV}
+    maximumRetryAttempts: 1
