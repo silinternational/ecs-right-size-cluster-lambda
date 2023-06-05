@@ -26,6 +26,8 @@ provider:
         - "autoscaling:DescribeLaunchConfigurations"
         - "autoscaling:UpdateAutoScalingGroup"
         - "ec2:DescribeInstances"
+        - "ec2:DescribeLaunchTemplates"
+        - "ec2:DescribeLaunchTemplateVersions"
         - "ecs:DescribeContainerInstances"
         - "ecs:DescribeServices"
         - "ecs:DescribeTaskDefinition"
@@ -55,3 +57,4 @@ functions:
         input:
           Region: ${env:AWS_REGION}
           ClusterNamesCSV: ${env:ClusterNamesCSV}
+    maximumRetryAttempts: 1

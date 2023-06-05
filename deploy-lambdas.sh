@@ -10,8 +10,10 @@ set -x
 go build -ldflags="-s -w" -o ecs-right-size-cluster
 
 STAGE="dev"
-if [[ "${CI_BRANCH}" == "master" ]]; then
+export ClusterNamesCSV="${ClusterNamesCSV_dev}"
+if [[ "${CI_BRANCH}" == "main" ]]; then
     STAGE="prod"
+    export ClusterNamesCSV="${ClusterNamesCSV_prod}"
 fi
 
 echo "Deploying ecs-right-size-cluster..."
