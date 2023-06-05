@@ -9,9 +9,8 @@ set -x
 # build binary
 go build -ldflags="-s -w" -o ecs-right-size-cluster
 
-export ClusterNamesCSV="${ClusterNamesCSV_dev}"
-
 STAGE="dev"
+export ClusterNamesCSV="${ClusterNamesCSV_dev}"
 if [[ "${CI_BRANCH}" == "main" ]]; then
     STAGE="prod"
     export ClusterNamesCSV="${ClusterNamesCSV_prod}"
