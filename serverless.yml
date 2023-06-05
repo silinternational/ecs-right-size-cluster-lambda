@@ -27,6 +27,8 @@ provider:
         - "autoscaling:UpdateAutoScalingGroup"
         - "ec2:DescribeInstances"
         - "ecs:DescribeContainerInstances"
+        - "ecs:DescribeLaunchTemplates"
+        - "ecs:DescribeLaunchTemplateVersions"
         - "ecs:DescribeServices"
         - "ecs:DescribeTaskDefinition"
         - "ecs:ListContainerInstances"
