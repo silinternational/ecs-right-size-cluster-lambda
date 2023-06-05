@@ -10,7 +10,7 @@ set -x
 go build -ldflags="-s -w" -o ecs-right-size-cluster
 
 STAGE="dev"
-if [[ "${CI_BRANCH}" == "master" ]]; then
+if [[ "${CI_BRANCH}" == "main" ]]; then
     STAGE="prod"
 fi
 
