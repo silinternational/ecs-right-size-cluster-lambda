@@ -1,4 +1,7 @@
 .idea/
+
+# Go output binary
+bootstrap
 aws.env
 *.aes
 vendor/
