@@ -4,7 +4,7 @@
  */
 module "serverless-user" {
   source  = "silinternational/serverless-user/aws"
-  version = "0.1.3"
+  version = "0.3.2"
 
   app_name   = "ecs-right-size"
   aws_region = var.aws_region
