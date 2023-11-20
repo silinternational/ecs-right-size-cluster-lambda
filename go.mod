@@ -1,6 +1,6 @@
 module github.com/silinternational/ecs-right-size-cluster-lambda
 
-go 1.19
+go 1.21
 
 require (
 	github.com/aws/aws-lambda-go v1.38.0
