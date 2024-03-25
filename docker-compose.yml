@@ -4,6 +4,11 @@ services:
     build: .
     volumes:
       - ./:/src
-    env_file:
-      - aws.env
+    environment:
+      AWS_REGION: $AWS_REGION
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+      ClusterNamesCSV_prod: $ClusterNamesCSV_prod
+      ClusterNamesCSV_dev: $ClusterNamesCSV_dev
+      atLeastServiceDesiredCount: $atLeastServiceDesiredCount
     command: ["bash"]

@@ -1,4 +1,0 @@
-- name: deploy
-  service: app
-  tag: ^(main|develop)
-  command: ./deploy-lambdas.sh
