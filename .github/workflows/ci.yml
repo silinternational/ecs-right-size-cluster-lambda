@@ -2,7 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [main develop]
+    branches:
+    - 'main'
+    - 'develop'
 
 env:
   AWS_REGION: us-east-1
