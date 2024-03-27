@@ -25,11 +25,8 @@ The `deploy-lambdas.sh` script can be used to build the Go binary and deploy the
 have NPM and Go installed locally you can use the Docker image with Docker Compose to build and deploy from a container 
 so you do not have to install all dependencies locally. Here are instructions for deploying with Docker:
 
-1. Copy `.env.example` to `.env`
-2. Update with appropriate values
-3. Run `docker-compose run app bash`
-4. From inside container run `./deploy-lambdas.sh`
-5. Done.
+1. Copy `.env.example` to `.env` and update with appropriate values
+2. Run `docker-compose run app ./deploy-lambdas.sh`
 
 ## IAM Permissions for running Serverless
 In order for Serverless to do its work you'll need a user with the following IAM permissions:

@@ -2,7 +2,7 @@
 
 # Go output binary
 bootstrap
-aws.env
+*.env
 *.aes
 vendor/
 .terraform/
