@@ -18,3 +18,4 @@ services:
       ClusterNamesCSV_prod: $ClusterNamesCSV_prod
       ClusterNamesCSV_dev: $ClusterNamesCSV_dev
       atLeastServiceDesiredCount: $atLeastServiceDesiredCount
+      GITHUB_REF_NAME: $GITHUB_REF_NAME
