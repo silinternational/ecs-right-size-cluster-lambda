@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+    - 'main'
+    - 'develop'
+
+env:
+  AWS_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  ClusterNamesCSV_prod: appsdev-prod
+  ClusterNamesCSV_dev: appsdev-stg
+  atLeastServiceDesiredCount: false
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy lambda
+        run: docker compose run deploy /src/deploy-lambdas.sh

@@ -7,11 +7,11 @@ set -e
 set -x
 
 # When using the provided.al2 runtime, the binary must be named "bootstrap" and be in the root directory
-CGO_ENABLED=0 go build -tags lambda.norpc -ldflags="-s -w" -o bootstrap
+CGO_ENABLED=0 go build -buildvcs=false -tags lambda.norpc -ldflags="-s -w" -o bootstrap
 
 STAGE="dev"
 export ClusterNamesCSV="${ClusterNamesCSV_dev}"
-if [[ "${CI_BRANCH}" == "main" ]]; then
+if [[ "${GITHUB_REF_NAME}" == "main" ]]; then
     STAGE="prod"
     export ClusterNamesCSV="${ClusterNamesCSV_prod}"
 fi
