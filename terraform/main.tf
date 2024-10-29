@@ -7,5 +7,4 @@ module "serverless-user" {
   version = "~> 0.4"
 
   app_name   = "ecs-right-size"
-  aws_region = var.aws_region
 }
