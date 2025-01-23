@@ -1,3 +1,7 @@
+# Archived
+
+This tool is no longer being maintained.
+
 # ecs-right-size-cluster-lambda
 Auto-scaling for ECS clusters in AWS based on built in CloudWatch alarms/events really isn't sufficent nor does it work
 very well. As a result we created this Lambda script to periodically check given ECS clusters and scale them appropriately.
